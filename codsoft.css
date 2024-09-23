@@ -1,0 +1,319 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins' , sans-serif;
+}
+body
+{
+    color: #ededed;
+}
+.header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+    cursor: default;
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+    font-family: 'Pacifico', cursive;
+    text-decoration: none;
+}
+.folio{
+    color: rgb(95, 3, 95);
+    font-family: 'Pacifico', cursive;
+}
+.navbar a{
+    display: inline-block;
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 520;
+    margin-left: 35px;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop .5s ease forwards;
+    font-family: 'Pacifico', cursive;
+}
+.navbar a.purple-link{
+    color: purple;
+}
+.navbar a:hover{
+   color: purple;
+}
+.navbar a.purple-link:hover{
+    color: white;
+}
+.home{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(depositphotos_67894311-stock-illustration-abstract-triangle-geometrical-light-purple.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+    padding-top: 100px;
+}
+.home-content{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+    gap: 15px;
+}
+.home-content h3{
+    font-size: 32px;
+    font-weight: 700;
+    opacity: 1;
+    animation: slidebottom 1s ease forwards;
+    animation-delay: .2s;
+}
+.home-content h3:nth-of-type(2){
+    margin-bottom: 30px;
+}
+.home-content h3 span{
+    color: rgb(95, 3, 95);
+}
+.home-content h1{
+    font-size: 56px;
+    font-weight: 700;
+    margin: -3px 0;
+}
+.home-content p{
+    font-size: 20px;
+
+}
+.home-sci {
+    display: flex; 
+    justify-content: start; 
+    align-items: center;
+    gap: 15px; 
+    margin-bottom: 30px; 
+}
+
+.home-sci a{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(95, 3, 95);
+    border-radius: 50%;
+    font-size: 20px;
+    color: #081b29;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    transition: all 0.3s ease;
+}
+.home-content a i{
+    display: block;
+    line-height: 40px;
+    text-align: center;
+}
+.home-sci a:hover{
+    background: purple;
+    color: #081b29;
+    box-shadow: 0 0 20px purple ;
+}
+.logo-img
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 800px;
+    height: auto;
+    z-index: 10;
+    opacity: 0.9;
+    bottom: -10px;
+}
+.btn-box{
+    display: inline-block;
+    padding: 12px 28px;
+    background: rgba(128, 8, 128, 0.668);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: none;
+
+}
+.btn-box:hover{
+    color: #1d1919;
+    background-color: #9932CC;
+    cursor: pointer;
+    box-shadow: 0 0 20px #800080, 0 0 40px #800080, 0 0 60px #800080, 0 0 80px #800080; /* Glow appears on hover */
+}
+.btn-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0); /* Shiny overlay */
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+.btn-box:hover::after {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05); /* Slightly enlarge the shine */
+}
+@keyframes slideRight{
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideTop{
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+.about{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(depositphotos_67894311-stock-illustration-abstract-triangle-geometrical-light-purple.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.image-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    height: 290px; 
+    left: -100px;
+    flex-basis: 35%;
+    margin-left: 60px;
+    margin-top: 5%;
+}
+
+.hexagon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 115%;
+    background-color: transparent;
+    clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+    overflow: hidden;
+}
+.hexagon img {
+    width: 100%; 
+    height: auto;
+    object-fit: cover;
+    clip-path: inherit;
+    z-index: 0;
+}
+.text-section{
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: purple;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;  
+}
+.tab-links.active-link::after{
+    width: 50%;
+    height: 3px;
+    background-color: purple;
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: rgb(95, 3, 95);
+    font-size: 14px;
+    font-weight: 600;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+.para{
+    color: rgb(148, 15, 148);
+    font-weight: 600;
+}
+.sub-title span{
+    color: purple;
+}
+.text-section h1.sub-title {
+    position: relative;
+    top: -50px; 
+}
+.text-section p.para{
+    position: relative;
+    top: -30px;
+}
