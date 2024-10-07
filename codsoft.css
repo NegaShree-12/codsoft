@@ -163,7 +163,7 @@ body
     color: #1d1919;
     background-color: #9932CC;
     cursor: pointer;
-    box-shadow: 0 0 20px #800080, 0 0 40px #800080, 0 0 60px #800080, 0 0 80px #800080; /* Glow appears on hover */
+    box-shadow: 0 0 20px #800080, 0 0 40px #800080, 0 0 60px #800080, 0 0 80px #800080;
 }
 .btn-box::after {
     content: "";
@@ -173,7 +173,7 @@ body
     width: 100%;
     height: 100%;
     border-radius: 40px;
-    background: rgba(255, 255, 255, 0); /* Shiny overlay */
+    background: rgba(255, 255, 255, 0);
     z-index: -1;
     opacity: 0;
     transition: all 0.4s ease;
@@ -181,7 +181,7 @@ body
 .btn-box:hover::after {
     opacity: 1;
     background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05); /* Slightly enlarge the shine */
+    transform: scale(1.05);
 }
 @keyframes slideRight{
     0% {
@@ -203,6 +203,18 @@ body
         opacity: 1;
     }
 }
+section {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    padding: 60px 10%;
+    overflow: hidden;
+}
+
+section.active {
+    display: block;
+}
+
 .about{
     position: relative;
     width: 100%;
@@ -257,6 +269,7 @@ body
     font-size: 60px;
     font-weight: 600;
     color: white;
+    position: relative;
 }
 .tab-titles{
     display: flex;
@@ -303,9 +316,10 @@ body
     display: block;
 }
 .para{
-    color: rgb(148, 15, 148);
-    font-weight: 600;
+    color: rgb(95, 3, 95);
+    font-size: large;   
 }
+
 .sub-title span{
     color: purple;
 }
@@ -316,4 +330,281 @@ body
 .text-section p.para{
     position: relative;
     top: -30px;
+}
+.skills{
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(depositphotos_67894311-stock-illustration-abstract-triangle-geometrical-light-purple.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+    padding-top: 100px;
+}
+.container1 {
+    display: flex;
+    flex-wrap: wrap;  
+    justify-content: space-between; 
+    gap: 20px; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+.container1 .card {
+    flex: 1 1 calc(33.33% - 20px); 
+    height: 250px;
+    background-color: #7f5792;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;  
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 992px) {
+    .container1 .card {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container1 .card {
+        flex: 1 1 100%;  
+    }
+}
+.container1 .card .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.container1 .card .percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
+}
+.container1 .card .percent svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke: #800080;
+    transform: translate(5px, 5px);
+}
+.active {
+    padding-top: 100px; 
+}
+.container1 .card .percent svg circle:nth-child(2) {
+    stroke: var(--cir); 
+    stroke-dasharray: 440; 
+    stroke-dashoffset: 440; 
+    transition: stroke-dashoffset 2s linear, stroke 0.5s ease; 
+}
+
+.container1 .card .percent svg circle:nth-child(2).active {
+    stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
+ }
+
+
+@keyframes fadeIn{
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+.dot{
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    transform: rotate(calc(3.6deg * var(--num)));
+    animation: animateDot 2s linear forwards;
+}
+@keyframes animateDot{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+.dot::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50px;
+    transform: translate(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--cir);
+    box-shadow: 0 0 10px var(--cir), 0 0 30px var(--cir);
+}
+.number{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+.number h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+.number h2 span{
+    font-weight: 300;
+    color: #fff;
+    font-size: 0.5em;
+
+}
+.number p{
+    font-weight: 300;
+    font-size: 0.75em;
+letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+} 
+.contact {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('depositphotos_67894311-stock-illustration-abstract-triangle-geometrical-light-purple.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 10%;
+}
+
+.contact-title {
+    font-size: 60px;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-title span {
+    color: purple;
+}
+
+.contact-description {
+    color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 18px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-box {
+    position: relative;
+    width: 800px;
+}
+
+.input-box input, .input-box textarea {
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus + label, 
+.input-box textarea:focus + label,
+.input-box input:not(:placeholder-shown) + label,
+.input-box textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: purple;
+}
+
+.input-box textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-sci {
+    flex: 0.4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-sci a {
+    font-size: 40px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.contact-sci a:hover {
+    color: purple;
+}
+
+.btn-box1 {
+    padding: 12px 28px;
+    background: rgba(128, 8, 128, 0.668);
+    border-radius: 40px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 800px;
+}
+
+.btn-box1:hover {
+    background-color: #9932CC;
+    box-shadow: 0 0 20px #800080, 0 0 40px #800080, 0 0 60px #800080;
 }

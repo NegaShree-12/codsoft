@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,13 +13,13 @@
         <a href="#" class="logo">PORT<span class="folio">FOLIO</span></a>
      
         <nav class="navbar">
-            <a href="#Home">HOME</a>
-            <a href="#" class="purple-link">ABOUT</a>
-            <a href="#">SKILLS</a>
-            <a href="#" class="purple-link">CONTACT</a>
+            <a href="#home">HOME</a>
+            <a href="#about" class="purple-link">ABOUT</a>
+            <a href="#skills">SKILLS</a>
+            <a href="#contact" class="purple-link">CONTACT</a>
         </nav>
     </header>
-    <section class="home">
+    <section id="home" class="home">
         <div class="home-content">
             <h1>Hi,I'm Nega </h1>
             <h3>And I'm a <span class="text"></span></h3>
@@ -36,7 +36,7 @@
             <a href="#" class="btn-box">MORE ABOUT ME</a>
         </div>
     </section>
-    <section class="about">
+    <section id="about" class="about">
         <div class="about-content">
             <div class="image-section">
                 <div class="hexagon">
@@ -45,8 +45,8 @@
             </div>
             <div class="text-section">
                 <h1 class="sub-title">About <span>Me</span></h1>
-                <div>
-                    <p class="para">
+                <div class="typing-container">
+                    <p class="para animated-typing">
                         I am passionate about web development, especially creating dynamic,user-friendly websites.
                         <br>With a focus on clean code and modern design principles,
                         <br> I strive to bring ideas to life with creative solutions.
@@ -82,6 +82,121 @@
         </div>
         </div>
     </section>
+    <section id="skills" class="skills active">
+    <div class="container1">
+        <div class="card">
+            <div class="percent" style="--cir:#04fc43;--num:95;">
+                <div class="dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+                <div class="number">
+                    <h2>95<span>%</span></h2>
+                    <p>HTML</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="percent" style="--cir:#ff00be;--num:85;">
+                <div class="dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+                <div class="number">
+                    <h2>85<span>%</span></h2>
+                    <p>CSS</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="percent" style="--cir:#06ccff;--num:80;">
+                <div class="dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+                <div class="number">
+                    <h2>80<span>%</span></h2>
+                    <p>JAVASCRIPT</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="percent" style="--cir:#ff00be;--num:80;">
+                <div class="dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+                <div class="number">
+                    <h2>80<span>%</span></h2>
+                    <p>REACT</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="percent" style="--cir:#04fc43;--num:80;">
+                <div class="dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+                <div class="number">
+                    <h2>80<span>%</span></h2>
+                    <p>C</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="percent" style="--cir:#fee800;--num:80;">
+                <div class="dot"></div>
+                <svg>
+                    <circle cx="70" cy="70" r="70"></circle>
+                    <circle cx="70" cy="70" r="70"></circle>
+                </svg>
+                <div class="number">
+                    <h2>75<span>%</span></h2>
+                    <p>PYTHON</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="contact">
+    <div class="contact-container">
+        <h1 class="contact-title">Contact <span>Me</span></h1>
+        <p class="contact-description">Feel free to reach out for any queries or collaborations!</p>
+
+        <div class="contact-content">
+            <form action="https://formspree.io/f/{YOUR_FORM_ID}" method="POST" class="contact-form">
+                <div class="input-box">
+                    <input type="text" name="name" required>
+                    <label for="name">Full Name:</label>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" required>
+                    <label for="email">Email:</label>
+                </div>
+                <div class="input-box">
+                    <textarea name="message" required></textarea>
+                    <label for="message">Your Message:</label>
+                </div>
+                <button type="submit" class="btn-box1">Send Message</button>
+            </form>
+
+            <div class="contact-sci">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-whatsapp'></i></a>
+                <a href="#"><i class='bx bxl-tiktok'></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
     <script src="codsoft.js"></script>
 </body>
 </html>
